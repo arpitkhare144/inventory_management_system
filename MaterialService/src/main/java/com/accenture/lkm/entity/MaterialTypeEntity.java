@@ -1,0 +1,48 @@
+package com.accenture.lkm.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "material_type")
+public class MaterialTypeEntity {
+	@Id
+	@Column(name = "type_id")
+	private String typeId;
+	@Column(name = "type_name")
+	private String typeName;
+	@Column(name = "category_id")
+	private String categoryId;
+	public MaterialTypeEntity() {
+	super();
+	}
+	
+	public MaterialTypeEntity(String typeId, String typeName, String categoryId) {
+		super();
+		this.typeId = typeId;
+		this.typeName = typeName;
+		this.categoryId = categoryId;
+	}
+
+	public String getTypeId() {
+	return typeId;
+	}
+	public void setTypeId(String typeId) {
+	this.typeId = typeId;
+	}
+	public String getTypeName() {
+	return typeName;
+	}
+	public void setTypeName(String typeName) {
+	this.typeName = typeName;
+	}
+	public String getCategoryId() {
+	return categoryId;
+	}
+	public void setCategoryId(String categoryId) {
+	this.categoryId = categoryId;
+	}
+	
+}
